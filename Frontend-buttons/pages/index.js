@@ -1,7 +1,8 @@
-import Head from 'next/head';
-import NumberInput from './../components/NumberInput';
+import NumberInput from './../components/NumberInput'
+import { BiJoystickButton } from 'react-icons/bi'
+import Head from 'next/head'
 
-export default function Home() {
+export default function Home () {
   return (
     <div className='bg-red-50'>
       <Head>
@@ -9,6 +10,7 @@ export default function Home() {
       </Head>
       <div className='flex flex-col items-center justify-center'>
         <h1 className="font-bold text-5xl text-center mt-28 mb-10 font-eaves-bold">Botones incrementales</h1>
+        <BiJoystickButton className='mb-10' color='#991b1b' size='150px'></BiJoystickButton>
         <ul className="mb-10 w-4/12 space-y-2 list-disc font-eaves-regular text-lg list-inside">
           <li>Usa los botones + y - para aumentar o disminuir el valor del cuadrado de abajo</li>
           <li>El cuadrado y su valor se pondrán rojos si estás cerca o en los límites del rango disponible</li>
@@ -18,7 +20,7 @@ export default function Home() {
       <div>
         <NumberInput value={7} max={15} min={4} softMin={6} softMax={13} step={1}></NumberInput>
       </div>
-      <footer className="bg-red-600 text-white h-8 mt-80 font-light text-sm">
+      <footer className="bg-red-600 text-white h-8 mt-60 font-light text-sm">
         <h3 className="text-center font-eaves-regular pt-1.5">Creado por Max Yáñez - Todos los derechos reservados ®</h3>
       </footer>
     </div>
