@@ -1,5 +1,5 @@
 # Test técnico para Galilea :house:
 Este repositorio tiene tres carpetas, las cuales contienen lo siguiente:
 * Frontend-buttons: Botones desarrollados en NextJS, donde se encuentra el componente *NumberInput* que recibe los parámetros ```{ value, max, min, softMin, softMax, step }```. Dentro de la carpeta se encuentran las instrucciones para ver la página web.
-* Lógica: Función *Compute25* desarrollada en Python
-* SQL: Consulta del problema creada en Postgres
+* Lógica: Función *Compute25* desarrollada en Javascript. Dentro del mismo archivo fueron testeados todos los casos descritos en ```tests.py```. Cabe destacar que gran parte del código fue basado de este [repositorio] (https://github.com/freeCodeCamp/freeCodeCamp/blob/main/curriculum/challenges/english/10-coding-interview-prep/rosetta-code/24-game.md).
+* SQL: Consulta del problema creada en Postgres, este se encuentra en el archivo *archivo.txt*
