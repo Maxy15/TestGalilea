@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face{
+  font-family: 'MrEaves Ultra';
+  src: url('./fonts/MrEavesUltra.ttf');
+}
+
+@font-face{
+  font-family: 'MrEaves Bold';
+  src: url('./fonts/MrEavesBold.ttf');
+}
+
+@font-face{
+  font-family: 'MrEaves Regular';
+  src: url('./fonts/MrEavesRegular.ttf');
+}
+
+@font-face{
+  font-family: 'MrEaves Light';
+  src: url('./fonts/MrEavesLight.ttf');
+}
+
+.font-eaves-ultra{
+  font-family: 'MrEaves Ultra';
+}
+
+.font-eaves-bold{
+  font-family: 'MrEaves Bold';
+}
+
+.font-eaves-regular{
+  font-family: 'MrEaves Regular';
+}
+
+.font-eaves-light{
+  font-family: 'MrEaves Light';
+}
