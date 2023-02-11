@@ -10,9 +10,9 @@ SELECT m.id, m.name, q.quantity FROM (
     FROM cubicated_quantities_df AS c
     INNER JOIN released_quantities_df AS r
     ON r.material_id = c.material_id 
-    INNER JOIN purchase_df as p
+    INNER JOIN purchase_df AS p
     ON p.material_id = c.material_id
-    RIGHT JOIN ticket_details_df as t
+    RIGHT JOIN ticket_details_df AS t
     ON t.material_id = c.material_id
 ) AS q
 INNER JOIN material_df AS m
