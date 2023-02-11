@@ -81,5 +81,3 @@ const tests = getTest();
 for (const key in tests){
     console.log(`${key.split('').join(' ')} => ${compute25(key)}`);
 }
-//console.log(compute25('8251'));
-//console.log(compute25('6153'));
