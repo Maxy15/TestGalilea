@@ -69,3 +69,19 @@ quantity = sum_cubicated_quantities_df - sum_purchase_quantities_df - (
 quantity = quantity.to_frame()
 join = pd.merge(material_df, quantity, left_on='id', right_on='material_id')
 print(join)
+
+'''
+La consulta de todos los pasos es
+SELECT m.id, m.name, q.quantity FROM (
+    SELECT c.material_id, c.quantity - p.quantity - (r.quantity - CASE WHEN t.quantity IS NULL 0 THEN t.quantity) AS quantity
+    FROM cubicated_quantities_df AS c
+    INNER JOIN released_quantities_df AS r
+    ON r.material_id = c.material_id 
+    INNER JOIN purchase_df as p
+    ON p.material_id = c.material_id
+    RIGHT JOIN ticket_details_df as t
+    ON t.material_id = c.material_id
+) AS q
+INNER JOIN material_df AS m
+ON m.material_id = q.material_id
+'''
