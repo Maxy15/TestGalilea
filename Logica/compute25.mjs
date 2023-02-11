@@ -1,10 +1,11 @@
-function compute25(digits){
+import { getTest } from "./tests.mjs";
+
+function getAnswer(digits){
     // Definimos los arreglos necesarios
     const digitsArray = [digits[0], digits[1], digits[2], digits[3]];
     const operatorCombinations = [];
     const digitCombinations = [];
     const answers = [];
-    console.log("digitsArray", digitsArray);   
 
     // Definimos las funciones útiles para generar combinaciones
     function createDigitsCombinations(digitsArray, combinations = []){
@@ -64,5 +65,21 @@ function compute25(digits){
     return answers[0];
 }
 
-console.log(compute25('6153'));
-console.log(compute25('8251'));
+// Manejo de la solución
+function compute25(digits){
+    const answer = getAnswer(digits);
+    if (answer === undefined){
+        return 'SIN SOLUCIÓN';
+    } else {
+        const answerWithSpaces = answer.split('').join(' ');
+        return answerWithSpaces;
+    }
+}
+
+// Testeo
+const tests = getTest();
+for (const key in tests){
+    console.log(`${key.split('').join(' ')} => ${compute25(key)}`);
+}
+//console.log(compute25('8251'));
+//console.log(compute25('6153'));
